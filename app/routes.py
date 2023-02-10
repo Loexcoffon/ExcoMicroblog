@@ -17,7 +17,7 @@ def songs():
             'song': 'Billy Jean'
         }
     ]
-    return render_template('songs.html', title='Home', user=user, songs=songs)
+    return render_template('songs.html', title='Songs', user=user, songs=songs)
 
 def index():
     user = {'username': 'Lohann'}
@@ -31,4 +31,4 @@ def index():
             'body': 'Samuel is sorta cool!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('index.html', title='Comments', user=user, posts=posts)
