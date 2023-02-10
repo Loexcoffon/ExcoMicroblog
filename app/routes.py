@@ -5,21 +5,6 @@ from app import app
 @app.route('/index')
 @app.route('/songs')
 
-def index():
-    user = {'username': 'Lohann'}
-    posts = [
-        {
-            'author': {'username': 'Samuel'},
-            'body': 'Michael is cool!'
-        },
-        {
-            'author': {'username': 'Michael'},
-            'body': 'Samuel is sorta cool!'
-        }
-    ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
-
-
 def songs():
     user = {'username': 'Lohann'}
     songs = [
@@ -33,3 +18,17 @@ def songs():
         }
     ]
     return render_template('songs.html', title='Home', user=user, songs=songs)
+
+def index():
+    user = {'username': 'Lohann'}
+    posts = [
+        {
+            'author': {'username': 'Samuel'},
+            'body': 'Michael is cool!'
+        },
+        {
+            'author': {'username': 'Michael'},
+            'body': 'Samuel is sorta cool!'
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)
