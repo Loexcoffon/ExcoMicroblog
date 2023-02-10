@@ -10,7 +10,7 @@
     <body>
         <h1>Hi, {{ user.username }}!</h1>
         {% for song in songs %}
-        <div><p>{{ song.artist.username }} says: <b>{{ song.body }}</b></p></div>
+        <div><p>{{ song.artist.username }} plays: <b>{{ songs.song }}</b></p></div>
         {% endfor %}
     </body>
 </html>
