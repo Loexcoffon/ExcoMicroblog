@@ -1,16 +1,8 @@
-<!doctype html>
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Microblog</title>
-        {% else %}
-        <title>Welcome to ExcoMicroblog</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Hi, {{ user.username }}!</h1>
-        {% for s in songs %}
-        <div><p>{{ s.artist.username }} plays: <b>{{ s.song }}</b></p></div>
-        {% endfor %}
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for s in songs %}
+    <div><p>{{ s.author.username }} says: <b>{{ s.song }}</b></p></div>
+    {% endfor %}
+{% endblock %}
