@@ -2,11 +2,9 @@ from flask import render_template
 from app import app
 
 @app.route('/')
-@app.route('/index')
 @app.route('/songs')
 
 def songs():
-    user = {'username': 'Lohann'}
     songs = [
         {
             'artist': {'username': 'The Beatles'},
@@ -17,8 +15,9 @@ def songs():
             'song': 'Billy Jean'
         }
     ]
-    return render_template('songs.html', title='Songs', user=user, songs=songs)
+    return render_template('songs.html', title='Songs', songs=songs)
 
+@app.route('/index')
 def index():
     user = {'username': 'Lohann'}
     posts = [
