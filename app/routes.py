@@ -32,4 +32,4 @@ def songs():
             'song': 'Billy Jean'
         }
     ]
-    return render_template('songs.html', title='Home', user=user, posts=posts)
+    return render_template('songs.html', title='Home', user=user, songs=songs)
