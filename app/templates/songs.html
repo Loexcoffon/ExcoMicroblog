@@ -3,6 +3,6 @@
 {% block content %}
     <h1>Hi, {{ user.username }}!</h1>
     {% for s in songs %}
-    <div><p>{{ s.author.username }} says: <b>{{ s.song }}</b></p></div>
+    <div><p>{{ s.artist.username }} says: <b>{{ s.song }}</b></p></div>
     {% endfor %}
 {% endblock %}
