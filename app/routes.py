@@ -28,7 +28,6 @@ def index():
     return render_template('index.html', title='Comments', user=user, posts=posts)
 
 @app.route('/songs')
-
 def songs():
     songs = [
         {
@@ -41,3 +40,9 @@ def songs():
         }
     ]
     return render_template('songs.html', title='Songs', songs=songs)
+
+@app.route('/deck')
+def deck():
+    suits = ["S", "C", "H", "D"]
+    nums = ['a','2','3','4','5','6','7','8','9','t','j','q','k']
+    return render_template('deck.html', title='Full Deck of Cards', suits=suits, nums=nums)

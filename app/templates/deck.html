@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>_______________</h1>
+    {% for suit in suits %}
+      {% for num in nums %}
+        <div><p>{{ suit,num }}</p></div>
+    {% endfor %}
+{% endblock %}
